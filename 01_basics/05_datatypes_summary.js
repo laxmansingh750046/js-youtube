@@ -31,3 +31,20 @@ console.table([typeof heroArray, typeof myObj, typeof myFunction])
        Object  =>  object
        Function  =>  function
     */
+
+//  https://262.ecma-international.org/5.1/#sec-11.4.3
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack(Primitive), Heap(Non-Primitive)
+
+let myName = "demon"
+let name1= myName;
+// in primitive only copy of data is assigne to new variable "name1"
+
+let objOne ={
+    email: "demon@gmail.com",
+    upi: "user@ybl"
+}
+let objTwo = objOne
+// reference of objOne is assigne to objTwo, hence if we make some change in any one both values will change
