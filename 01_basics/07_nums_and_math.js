@@ -18,3 +18,12 @@ console.table([n1.toPrecision(3), n1.toPrecision(4), n1.toPrecision(4)]);/*
 │ 1       │ '1124'    │
 │ 2       │ '1124'    │
 └─────────┴───────────┘*/
+
+const hundreds = 1000000
+console.log(hundreds.toLocaleString('en-IN'))
+
+const maxval = Number.MAX_VALUE;
+console.log(maxval);   //1.7976931348623157e+308
+console.log(Number.MIN_VALUE) //5e-324
+console.log(Number.MAX_SAFE_INTEGER) //9007199254740991
+console.log(Number.MIN_SAFE_INTEGER) //-9007199254740991
