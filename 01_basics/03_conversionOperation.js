@@ -30,3 +30,15 @@ let someNumber = 33
 let stringSomeNumber = String(someNumber)
 console.log(stringSomeNumber);
 console.log(typeof stringSomeNumber);
+
+// ************** Operations ***************
+console.log("************** Operations ***************")
+
+let value=3
+let negValue = -value
+console.log(negValue)
+console.log(2**3)
+console.log(4/2)
+console.log(4%3) //remainder
+console.log(2+2+"3")
+console.log("2"+2+2)
