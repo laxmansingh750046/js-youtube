@@ -16,4 +16,13 @@ console.log(myDate.toUTCString())       // Thu, 22 May 2025 04:23:59 GMT
 let myCreatedDate = new Date(2002, 0, 24)
 console.log(myCreatedDate.toDateString())  // Thu Jan 24 2002  // months start with 0
 
+let myTimeStamp =  Date.now()
+console.log(myTimeStamp)  //1747915978902 in milisecond
+console.log(Math.floor(myTimeStamp/1000)) // in second
+
+let newDate = new Date();
+console.log(newDate.getMonth()); // 4  may
+console.log(newDate.getDay());  // 4  thrusday
+
+
 
