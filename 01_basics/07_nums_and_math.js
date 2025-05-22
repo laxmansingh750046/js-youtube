@@ -52,7 +52,7 @@ console.log(Math.min());             // returns Infinity (no arguments)
 console.log(Math.max(4,3,6,11,2,21))  //21  return max value from arguments
 console.log(Math.max())        // return -Infinity
 
-console.log(Math.random())  // alway return random values between 0 and 1
+console.log(Math.random())  // alway return random values in range [0,1)
 
 // if u want value between specific range  
 const minr = 10, maxr = 20
