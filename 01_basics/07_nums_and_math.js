@@ -10,13 +10,13 @@ console.log(balance.toString().length);
 console.log(balance.toFixed(2)); //100.12
 
 const n1 = 1123.8696
-console.table([n1.toPrecision(3), n1.toPrecision(4), n1.toPrecision(4)]);/*
+console.table([n1.toPrecision(3), n1.toPrecision(4), n1.toPrecision(5)]);/*
 ┌─────────┬───────────┐
 │ (index) │ Values    │
 ├─────────┼───────────┤
 │ 0       │ '1.12e+3' │
 │ 1       │ '1124'    │
-│ 2       │ '1124'    │
+│ 2       │ '1129'    │
 └─────────┴───────────┘*/
 
 const hundreds = 1000000
