@@ -27,9 +27,9 @@ console.log(newArray)  // 3,true,Demon,12.21
 
 //  slice ,  splice
 const myn1 = myArray.slice(1,3) // copy a portion from array , exluding ending index
-console.log(myn1)
-console.log("slice",myArray)
+console.log(myn1)  //[ true, 'Demon' ]
+console.log("slice",myArray)  //slice [ 3, true, 'Demon', 12.21 ]
 
-const myn2 = myArray.splice(1,3) // cut a portion from array , including ending index
-console.log(myn2)
-console.log("splice",myArray)
+const myn2 = myArray.splice(1,3) // cut a portion from array, itw will delete that portion from original array. including ending index
+console.log(myn2)  //[ true, 'Demon', 12.21 ]
+console.log("splice",myArray) //splice [ 3 ]
