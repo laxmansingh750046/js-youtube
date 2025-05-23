@@ -20,7 +20,7 @@ console.table([n1.toPrecision(3), n1.toPrecision(4), n1.toPrecision(5)]);/*
 └─────────┴───────────┘*/
 
 const hundreds = 1000000
-console.log(hundreds.toLocaleString('en-IN'))
+console.log(hundreds.toLocaleString('en-IN')) //10,00,000
 
 const maxval = Number.MAX_VALUE;
 console.log(maxval);   //1.7976931348623157e+308
