@@ -20,4 +20,4 @@
 //JavaScript does automatic semicolon insertion (ASI), but it doesn't always do it correctly when two IIFEs are placed back-to-back without a semicolon in between.
 JavaScript thinks you're trying to call the result of the first IIFE as a function, like this 
 ()()()()
-/*
+*/
