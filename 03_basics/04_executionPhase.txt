@@ -1,0 +1,58 @@
+executin phase
+1) Global execution
+2) memory phase
+3) execution phase
+
+let val1 = 10, val2 = 5
+function addNum(num1, num2){
+    let total = num1+num2;
+    return total;
+}
+
+let result1 = addNum(val1, val2);
+let result2 = addNum(10,2);
+
+
+
+When JavaScript code runs, it goes through two main phases inside the Global Execution Context (GEC):
+
+1️⃣ Memory Creation Phase (Creation Phase)
+   Variables and functions are stored in memory.
+   Variables are assigned undefined.
+   Function declarations are fully stored.
+
+for code:
+    let val1 = 10, val2 = 5;
+    function addNum(num1, num2) { ... }
+    let result1;
+    let result2;
+
+    In memory:
+        val1 → undefined
+        val2 → undefined
+        addNum → function
+        result1 → undefined
+        result2 → undefined
+
+2️⃣ Execution Phase:
+   Variables are assigned actual values.
+   Functions are executed line by line.
+   A new Execution Context is created each time a function is called.
+
+for code
+  let val1 = 10;
+  let val2 = 5;
+  let result1 = addNum(val1, val2);  // New EC created for addNum
+  let result2 = addNum(10, 2);       // Another EC created for addNum
+
+🔁 Function Call Execution:
+     Each function call creates a new Execution Context with its own:
+        Memory phase: num1, num2, total → initially undefined
+        Execution phase: num1 = 10, num2 = 5, total = 15, then return 15
+
+✅ Summary:
+    Memory Phase: Variables and functions are hoisted.
+    Execution Phase: Code runs top to bottom, functions create their own context.
+
+Function calls create a new execution context inside the call stack.
+
