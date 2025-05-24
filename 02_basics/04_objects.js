@@ -71,3 +71,9 @@ const course = {
 
 //==============Json Api intro ============================
 
+// const course = {
+//     "coursName": "Java Script",
+//     "price": 499,
+//     "courseInstructor": "Demon"
+// }
+
