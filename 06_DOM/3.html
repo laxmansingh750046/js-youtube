@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DOM | Create & Append Element</title>
+  <style>
+    .bg-black {
+      background-color: #121212;
+      color: #fff;
+    }
+  </style>
+</head>
+<body class="bg-black">
+  <!-- Content will be added dynamically using JavaScript -->
+</body>
+
+<script>
+  // ============================
+  // DOM Notes: Creating & Appending a New <div> Element
+  // ============================
+
+  // Create a new <div> element
+  const div = document.createElement('div');
+
+  // Set class name (this overwrites any existing class)
+  div.className = "main";
+
+  // Set an ID (numeric value will be auto-converted to string)
+  div.id = 9; // e.g., could also use: Math.round(Math.random() * 10 + 1);
+
+  // Set a 'title' attribute (this adds or replaces the title attribute)
+  div.setAttribute('title', 'title generated');
+
+  // Apply inline styles
+  div.style.backgroundColor = 'green';
+  div.style.padding = '15px';
+
+  // Add text using createTextNode (better than innerText if you're building DOM nodes manually)
+  let addText = document.createTextNode("cs_monk");
+  div.appendChild(addText);
+
+  // Append the <div> to the <body>
+  document.body.appendChild(div);
+
+  // Log the final div structure to console
+  console.log(div);
+</script>
+</html>
+
+<!-- ✅ Summary of Improvements:
+Added heading comment to explain purpose.
+
+Explained each line clearly with inline comments.
+
+Renamed title to something meaningful.
+
+Kept the structure clean and readable. -->
