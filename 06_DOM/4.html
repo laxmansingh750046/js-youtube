@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body style="background-color: #121212; color: #fff;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    function addElement(lang){
+        const li = document.createElement('li');
+        li.innerText = `${lang}`;
+        document.querySelector(".language").appendChild(li);
+    }
+    addElement("c");
+    addElement("c++");
+
+    function addElement_opti(lang){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(lang));
+        document.querySelector('.language').appendChild(li);
+    }
+    addElement_opti('golang');
+
+    //Edit   : replace 2nd lang with mojo
+    // const secondlang = document.querySelector("li:nth-child(2)");
+    // const li = document.createElement('li');
+    // li.textContent ='Mojo'; // li.innerHTML = 'Mojo', li.innerText='Mojo';
+    // secondlang.replaceWith(li);
+
+    // Edite   : replace 1st with typescript
+    // const pli = document.querySelector("li:first-child");
+    // const li = document.createElement('li');
+    // li.appendChild(document.createTextNode("typescript"));
+    // pli.replaceWith(li);
+
+    // Edite   : replace last with python
+    // const pli = document.querySelector("li:last-child");
+    // pli.outerHTML = '<li>python</li>';
+
+    // Edit : remove first c++
+    // const thirdli = document.querySelector('li:nth-child(3)');
+    // thirdli.remove();
+    
+</script>
+</html>
