@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM | DEMON>>></title>
+  <style>
+    .bg-black {
+      background-color: #212121;
+      color: #fff;
+    }
+  </style>
+</head>
+<body class="bg-black">
+  <div class="parent">
+    <div class="day">Monday</div>
+    <div class="day">Tuesday</div>
+    <div class="day">Wednesday</div>
+    <div class="day">Thursday</div>
+  </div>
+
+  <script>
+    const parent = document.querySelector('.parent');
+
+    // Loop through children (only element nodes)
+    for (let i = 0; i < parent.children.length; i++) {
+      console.log(parent.children[i].innerHTML);
+    }
+
+    // Style second child (Tuesday)
+    parent.children[1].style.color = 'orange';
+
+    // First and last element child
+    console.log("First Child:", parent.firstElementChild);  // Monday
+    console.log("Last Child:", parent.lastElementChild);    // Thursday
+
+    // Working with specific day element
+    const dayOne = document.querySelector('.day');
+    console.log("Parent of .day:", dayOne.parentElement);   // .parent div
+    console.log("Next sibling of .day:", dayOne.nextElementSibling); // Tuesday
+
+    // childNodes vs children
+    // .children returns only element nodes
+    // .childNodes returns all node types (including text nodes like whitespace/newlines)
+    console.log("All child nodes (includes text):", parent.childNodes);
+    parent.childNodes.forEach(node => {
+      console.log("NodeType:", node.nodeType, "Node:", node);
+    });
+
+    // To skip text nodes and access only elements
+    parent.childNodes.forEach(node => {
+      if (node.nodeType === 1) {
+        console.log("Element Node Content:", node.innerHTML);
+      }
+    });
+  </script>
+</body>
+</html>
