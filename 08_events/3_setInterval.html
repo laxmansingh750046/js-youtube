@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+</head>
+<body>
+    <h1>CS_MONKS</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <div class="free"></div>
+</body>
+<script>
+    const printTime = ()=>{
+        const date = new Date();
+        const time = date.toLocaleTimeString();
+        document.querySelector('.free').innerHTML += `<p>${time}</p>`;
+    }
+    let intervalId;
+    // console.log(timeoutId, typeof timeoutId);
+    document.getElementById('start').addEventListener('click',function (){
+        intervalId= setInterval(printTime, 1000);
+       console.log("STARTED");
+    });
+    document.getElementById('stop').addEventListener('click',function (){
+       clearInterval(intervalId);
+       console.log("STOPED");
+    });
+</script>
+</html>
