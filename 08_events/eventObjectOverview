@@ -1,0 +1,70 @@
+
+JavaScript Event Object & Event Listeners Notes
+1. Event Object (e)
+Automatically passed to event handlers.
+Contains info about the event: type, target element, coordinates, timestamp, etc.
+Inherits from specific event prototypes (e.g., PointerEvent for pointer-related events).
+
+2. e.type
+String indicating the event type (e.g., "click", "keydown").
+
+3. keydown Event
+Occurs when a key is pressed down on the keyboard.
+
+Example:
+element.addEventListener('keydown', e => {
+  console.log('Key pressed:', e.key);
+});
+
+
+4. Third Parameter in addEventListener
+   Controls event listener options.
+   Boolean — true for capturing, false (default) for bubbling.
+
+5. e.timeStamp
+   Time in milliseconds since the page started loading when the event occurred.
+
+6. e.target
+   The element that originally triggered the event.
+
+7. Attaching One Event Listener to Multiple Elements
+   Use querySelectorAll + forEach:
+
+ document.querySelectorAll('.btn').forEach(btn => {
+   btn.addEventListener('click', e => {
+     console.log('Clicked:', e.target.textContent);
+   });
+  });
+Or use event delegation by adding listener to a common parent and checking e.target.
+
+8. Event Delegation
+   Attach listener to parent. Detect event source via e.target.
+   Efficient and supports dynamic elements.
+   
+   Example:
+   parentElement.addEventListener('click', e => {
+     if(e.target.matches('.btn')) {
+       console.log('Clicked:', e.target.textContent);
+     }
+   });
+
+9. e.toElement
+  Non-standard, mostly IE.
+  Refers to element mouse moved to during mouseout/mouseover.
+  Use standard e.relatedTarget instead.
+
+10. e.srcElement
+  Non-standard, old IE property.
+  Equivalent to standard e.target.
+
+11. e.currentTarget
+  The element to which the event listener is attached during event propagation
+  Differs from target which is the original event source.
+
+12. Mouse Coordinates Properties
+    Property	Meaning
+    clientX	X coordinate relative to the viewport (browser visible area)
+    clientY	Y coordinate relative to the viewport
+    screenX	X coordinate relative to the physical screen (monitor)
+    screenY	Y coordinate relative to the physical screen
+
