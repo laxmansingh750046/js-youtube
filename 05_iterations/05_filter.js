@@ -17,4 +17,4 @@ const books = [
 
 //romantic books publis after 2020
 // const userBooks = books.filter((book)=>{return book.publish >= 2020 && book.genre === 'Romance'});
-// console.log(userBooks); //[ { title: 'Midnight in Autumn', genre: 'Romance', publish: 2020 } ]
+// console.log(userBooks); //[ { title: 'Midnight in Autumn', genre: 'Romance', publish: 2020 } ] 
