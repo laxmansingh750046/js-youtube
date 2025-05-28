@@ -1,0 +1,17 @@
+ fetch()
+ 
+The fetch() function initiates a network request and returns a Promise that resolves to the response.
+
+Microtask Queue: When the Promise returned by fetch() resolves, its .then() callbacks are placed in the microtask queue. 
+Microtasks have higher priority than macrotasks (like those scheduled with setTimeout).
+
+Two-Phase Operation:
+  1-Request Initiation: fetch() sends the HTTP request over the network.
+
+  2-Response Handling: Upon receiving the response, the Promise is settled, 
+      and the appropriate callbacks (onFulfilled or onRejection) are queued as microtasks.
+  
+
+  Private Fields: Internally, fetch() may utilize private fields such as data, 
+  onFulfilled[], and onRejection[] to manage the state and callbacks of the Promise. 
+  These are not accessible to developers and are handled by the JavaScript engine. 
