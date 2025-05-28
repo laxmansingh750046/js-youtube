@@ -1,3 +1,4 @@
+ // 1 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
 const promiseOne = new Promise(function(resolve,reject){
     //Do an async task,  db calls, cryptograhy, network
     setTimeout(() => {
@@ -11,8 +12,7 @@ promiseOne.then(function(){
 })
 
 
-
-//   promiseTwo
+// 2 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
 new Promise(function(resolve,reject){
     setTimeout(() => {
         console.log("promise 2Resolved");
@@ -24,6 +24,7 @@ new Promise(function(resolve,reject){
 });
 
 
+// 3 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 const promiseThree = new Promise(function(res,rej){
     setTimeout(function(){
@@ -36,7 +37,7 @@ promiseThree.then((user)=>{
 
 
 
-// promise4
+// 4 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
 new Promise((res,rej)=>{
     setTimeout(() => {
         rej("SOME THING WENT WRONG");
@@ -47,6 +48,8 @@ new Promise((res,rej)=>{
 .finally(()=>{console.log('Promise 4 either resolved or rejected')});
 
 
+
+// 5 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 const promiseFive = new Promise((res,rej)=>{
     setTimeout(() => {
@@ -67,7 +70,7 @@ async function consumedPromise(){
 consumedPromise();
 
 
-
+// 6 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
 async function getAllUsers(){
     try{
         const respons = await fetch('https://jsonplaceholder.typicode.com/users');
@@ -81,6 +84,8 @@ async function getAllUsers(){
 getAllUsers();
 
 
+
+// 7 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 fetch('https://api.github.com/users/laxmansingh750046')
 .then((response)=>{
