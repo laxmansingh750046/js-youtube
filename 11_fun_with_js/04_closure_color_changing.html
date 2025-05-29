@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demon</title>
+</head>
+<body>
+    <button class="on_click">green</button>
+    <button class="on_click">orange</button>
+    <button class="on_click">yellow</button>
+    <button class="on_click">red</button>
+    <button class="on_click">blue</button>
+</body>
+<script>
+   const buttons = document.querySelectorAll('.on_click');
+//    button.onclick = function(){
+//     document.body.style.backgroundColor = 'green';
+//    }
+
+function clickHandlerCreater(color) {
+    return function(){
+        document.body.style.backgroundColor=color;
+    }
+}
+
+buttons.forEach((e)=>{
+    console.log(e.textContent);
+    e.onclick = clickHandlerCreater(e.textContent);
+});
+
+
+</script>
+</html>
