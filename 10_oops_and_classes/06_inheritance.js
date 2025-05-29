@@ -25,3 +25,15 @@ const chai = new Teacher('chai','adf@gma',123);
 
 console.log(chai instanceof User);
 console.log(chai instanceof Teacher);
+
+// 🔗 Final Chain:
+// plaintext
+// Copy
+// Edit
+// chai
+//   ↓ [[Prototype]]
+// Teacher.prototype
+//   ↓ [[Prototype]]
+// User.prototype
+//   ↓ [[Prototype]]
+// Object.prototype
