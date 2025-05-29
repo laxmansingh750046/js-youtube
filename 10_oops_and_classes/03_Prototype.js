@@ -38,7 +38,7 @@
 //✅ Method 1:  Object.setPrototypeOf(Child,Parent);
 
 /*
-✅ Method 2: Object.create(parent)
+✅ Method 2: Object.create(Parent)
     const child = Object.create(parent);
     child.makeAssignment = 'JS assignment';
     child.fullTime = true;
