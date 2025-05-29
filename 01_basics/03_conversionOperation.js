@@ -6,9 +6,9 @@ let valueInNumber1 = Number(score1)
 let valueInNumber2 = Number(score2)  
 /*
  -Number()
-  "33abc" to Nan ( not a number)
+  "33abc" to NaN ( Not a Number)
   null to 0
-  Undefined to Nan
+  Undefined to NaN
   true/false to 1/0
 */
 console.log(typeof(valueInNumber1)); //number
